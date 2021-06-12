@@ -1,0 +1,12 @@
+input{
+    border: white;
+    color: indigo;
+    background-color: white;
+    font: 1em sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
