@@ -8,11 +8,14 @@
   </head>
   <body>
       <!-- <a href="">View Highscore</a> -->
-      <input type='button' onclick='switchPage("highscore","index")' value='Test'>
-      <div >
-
+      
+      <div  class = "container">
+        <h1>Highscores</h1>
+        <ol class="scores"></ol>
+        <input type='button' class="goback" onclick='switchPage("highscore","index")' value='GoBack'>
+        <input type='button' class="clear" value='Clear Highscores'>
       </div>
 
-      <script src="assets/script.js"></script>
+      <script src="assets/highscore.js"></script>
   </body>
   </html>

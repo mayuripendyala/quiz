@@ -1,4 +1,4 @@
-input{
+.header > input{
     border: white;
     color: indigo;
     background-color: white;
@@ -10,3 +10,22 @@ input{
     justify-content: space-between;
 }
 
+.quiz-start,.questions,.container {
+    margin: 10% auto;
+    max-width: 50%;
+
+}
+
+.start-button ,.goback,.clear{
+    background-color: indigo;
+    color: white;
+
+}
+
+.container::after{
+    display: none;
+}
+
+hr {
+    display: none;
+}

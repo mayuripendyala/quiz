@@ -10,9 +10,25 @@
       <!-- <a href="">View Highscore</a> -->
       <div class="header">
       <input type='button' onclick= 'switchPage("index","highscore")' value='View Highscore'>
+      <div class ="time"><strong>Time :</strong> <span class="time-count"></span></div>
+      </div>
+      <div class="quiz-start">
+         <p><strong>Code Quiz challenge</strong> </p>
+         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+          answers
+          will penalize your score/time by ten seconds!</p>
 
-      <div class ="time">Time :<span class="time-count"></span></div>
+        <input type="button" class="start-button" value="start" />
+        
+       </div> 
+      <div class="container">
+      <div class="questions">
+        <p class=question></p>
+        <ol class="optionsUl"></ol>
+      </div>
+      <hr class="hLine">
     </div>
+    
       <script src="assets/script.js"></script>
   </body>
   </html>
