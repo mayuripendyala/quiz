@@ -13,7 +13,7 @@ function switchPage(from, to) {
     {
         question : "What is the element used – and hidden – in code that explains things and makes the content more readable?",
         options : ["1.Comments","2.Comparisons","3.Notes","4.Quotations"],
-        answer : "2.Comments"
+        answer : "1.Comments"
     },
     {
         question : "In JavaScript, what element is used to store multiple values in a single variable?",
@@ -34,11 +34,12 @@ var optionElement = document.querySelector(".optionsUl");
 var questionsElement =document.querySelector(".questions");
 var containerElement =document.querySelector(".container");
 
-var line =document.querySelector("hr");
+var line =document.querySelector(".hLine");
 
 var indx=0;
 var timerCount=40;
 var currentScore ;
+var timer;
 
 var allScores = [];
 
@@ -47,19 +48,25 @@ createEl.setAttribute("id","createP");
 
 
 
-startButton.addEventListener("click",startTimer);
+startButton.addEventListener("click",start);
+
+function start(){
+    hideDiv(quizBlock);
+    displayQuestions(indx);
+    startTimer();
+}
 
 function startTimer() {
     // event.preventDefault();
-    indx=0;
-   var timer = setInterval(function(){       
-        console.log(timerCount);
-        hideDiv(quizBlock);
-        displayQuestions(indx);
+    
+    timer = setInterval(function(){       
+        // console.log(timerCount);
+
         timerElement.textContent =timerCount;
-        if(timerCount == 0 ) {
+        if(timerCount === 0 ) {
             currentScore=timerCount;
-            clearInterval(timer);
+            // clearInterval(timer);
+            quizOver();
         }
         else{
             timerCount--;
@@ -92,13 +99,15 @@ function clearPrevQuestion() {
 function displayQuestions(indx) {
 
         clearPrevQuestion();
+        console.log(indx);
         questionElement.textContent=allQuestions[indx].question;   
 
         var codeOptions =allQuestions[indx].options;
-        console.log(questionElement);
+        // console.log(questionElement);
         codeOptions.forEach(function(option){
                 var buttonEl = document.createElement("button");
-                buttonEl.setAttribute("style","colour:white;display:block;margin:5px 0px;background-color: #4b0082a3;");
+                buttonEl.setAttribute("style","colour:white;display:block;margin:5px 0px;background-color: indigo;");
+                buttonEl.focus();
                 buttonEl.innerText = option;
                 optionElement.appendChild(buttonEl);
                 buttonEl.addEventListener("click",compare);
@@ -123,14 +132,14 @@ function compare(event) {
 
     }
     indx++;
-    if(indx >= allQuestions.length){
+    if(indx == allQuestions.length){
         currentScore=timerCount;
-        timerCount=0;
         quizOver();
+        
 
     }
     else{
-
+       
         displayQuestions(indx);
     }
     line.setAttribute("style","display:block");
@@ -140,8 +149,10 @@ function compare(event) {
 }
 // This is to get the details of user when quiz finished
 function quizOver() {
-    
+    clearInterval(timer);
     clearPrevQuestion();
+    
+    timerElement.textContent =timerCount;
 
     var createH1= document.createElement("H1");
     createH1.setAttribute("class","createH1");
@@ -149,19 +160,13 @@ function quizOver() {
 
     questionsElement.appendChild(createH1);
 
-
     var createP= document.createElement("P");
     createP.setAttribute("class","createP");
 
     questionsElement.appendChild(createP);
 
     //Calculating time remaining and replace it with the score
-    console.log(timerCount);
-
-    if(timerCount >=0){
         createP.textContent="Your Score is : " + currentScore;
-       //clearInterval(timer);
-    }
 
     var createLabel =document.createElement("label");
     createLabel.setAttribute("class","createLabel");
@@ -175,6 +180,7 @@ function quizOver() {
     createInput.textContent = "";
 
     questionsElement.appendChild(createInput);
+    
 
     var createSubmit =document.createElement("button");
     createSubmit.setAttribute("class","createSubmit");
@@ -183,10 +189,11 @@ function quizOver() {
 
     questionsElement.appendChild(createSubmit);
 
+   
     createSubmit.addEventListener("click",function(){
         var inputVal = createInput.value;
 
-        if(inputVal === null) {
+        if(inputVal === "") {
 
             console.log("No Initials Entered");
         }

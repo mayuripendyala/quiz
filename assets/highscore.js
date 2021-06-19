@@ -16,12 +16,13 @@ var allScores = localStorage.getItem("allScores");
 allScores =JSON.parse(allScores);
 
 if(allScores!=null) {
+    var int =1 ;
     allScores.forEach(function(scores){
         var createButton = document.createElement("li");
-        createButton.textContent=scores.initials + " - " + scores.score;
+        createButton.textContent= int +". " +scores.initials + " - " + scores.score;
 
         highScore.appendChild(createButton);
-
+        int++;
     });
 }
 
