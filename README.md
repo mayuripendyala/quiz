@@ -10,10 +10,10 @@ There are navigation between the intial quiz and hiscore pages.
 
 Demo pictures :
 
-![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.11 pm.png)
+![Screenshot](https://github.com/mayuripendyala/quiz/blob/main/assets/demo/Screen%20Shot%202021-06-21%20at%201.53.11%20pm.png)
 
-![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.18 pm.png)
+![Screenshot](https://github.com/mayuripendyala/quiz/blob/main/assets/demo/Screen%20Shot%202021-06-21%20at%201.53.18%20pm.png)
 
-![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.26 pm.png)
+![Screenshot](https://github.com/mayuripendyala/quiz/blob/main/assets/demo/Screen%20Shot%202021-06-21%20at%201.53.26%20pm.png)
 
-![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.29 pm.png)
+![Screenshot](https://github.com/mayuripendyala/quiz/blob/main/assets/demo/Screen%20Shot%202021-06-21%20at%201.53.29%20pm.png)
