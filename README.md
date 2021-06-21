@@ -10,11 +10,10 @@ There are navigation between the intial quiz and hiscore pages.
 
 Demo pictures :
 
+![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.11 pm.png)
 
-(/quiz/assets/demo/Screen Shot 2021-06-21 at 1.53.11 pm.png
+![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.18 pm.png)
 
-/quiz/assets/demo/Screen Shot 2021-06-21 at 1.53.18 pm.png
+![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.26 pm.png)
 
-
-/quiz/assets/demo/Screen Shot 2021-06-21 at 1.53.26 pm.png
-/quiz/assets/demo/Screen Shot 2021-06-21 at 1.53.29 pm.png
+![Screenshot](assets/demo/Screen Shot 2021-06-21 at 1.53.29 pm.png)

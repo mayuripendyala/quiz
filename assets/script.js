@@ -190,7 +190,8 @@ function quizOver() {
     questionsElement.appendChild(createSubmit);
 
    
-    createSubmit.addEventListener("click",function(){
+    createSubmit.addEventListener("click",function(event){
+        event.preventDefault();
         var inputVal = createInput.value;
 
         if(inputVal === "") {
